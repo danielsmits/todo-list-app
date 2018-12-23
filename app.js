@@ -4,6 +4,7 @@ function addTask() {
   if (task.length === 0) {
     task = "empty task";
   }
+
   document.getElementById("task-list").insertAdjacentHTML('afterbegin', `
    <li class="collection-item">${task}
      <a href="#" class="delete-item secondary-content">
@@ -11,6 +12,8 @@ function addTask() {
      </a>
    </li>
   `)
+
+  document.getElementById('task-form').reset();
 }
 
 function removeTask(task) {
@@ -24,6 +27,3 @@ function clearTasks() {
     list[0].remove();
   }
 }
-
-
-
